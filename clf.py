@@ -16,6 +16,6 @@ y = np.array(category)
 # Naive Bayes classifier to classify text as ham or spam
 clf = MultinomialNB()
 clf.fit(X, y)
-test_txt = vectorizer.transform([""]).toarray()
+test_txt = vectorizer.transform(["You just won a trip to the Moon! Congratulations!"]).toarray()
 prediction = clf.predict(test_txt)
 print(prediction[0])
